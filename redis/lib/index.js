@@ -39,8 +39,9 @@ console.log(res8);
 const res9 = await redis.randomkey() //随机返回一个KEY
 console.log('随机返回一个KEY：',res9);
 
-
-
+// 设置过期时间
+const temp = await redis.set('test_expire','this is a expire text','EX',30000)
+console.log(temp);
 
 // rename 命令   修改key值得名称              rename old_name new_name  
 // 改名成功时提示 OK ，失败时候返回一个错误。当 OLD_KEY_NAME 和 NEW_KEY_NAME 相同，或者 OLD_KEY_NAME 不存在时，返回一个错误。 当 NEW_KEY_NAME 已经存在时， RENAME 命令将覆盖旧值。
