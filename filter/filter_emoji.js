@@ -23,9 +23,18 @@ function removeBlank(str) {
   return ret;
 }
 
+export const trimStr = str => {
+  let ret = '';
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] !== ' ') {
+      ret += str[i];
+    }
+  }
+  return ret;
+};
 
 
 
 console.log('>>>',filterNicknameWithEmoj("sadfasdgfasdf哈哈🤣🤣🤣🤣💕✌🎂✔🤔嘿嘿dsaasdfgsad"));
 
-console.log('>>>2',removeBlank(' v v v f g h   '));
+console.log('>>>2',trimStr(' v v v f g h   '));
