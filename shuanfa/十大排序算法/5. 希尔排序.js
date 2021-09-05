@@ -1,19 +1,32 @@
+/**
+ * 希尔排序，也成为缩小增量排序
+ *
+ * 插入排序的升级版
+ *
+ *
+ */
 
+// function shellSort(arr) {
+//   let len = arr.length;
+//   let temp;
+//   let gap = 1;
+//   while (gap < len / 3) {
+//     //动态定义间隔序列
+//     gap = gap * 3 + 1;
+//   }
+//   console.log(gap);
+//   for (; gap > 0; gap = Math.floor(gap / 3)) {
+//     for (let i = gap; i < len; i++) {
+//       temp = arr[i];
+//       let j = i - gap;
+//       for (; j >= 0 && arr[j] > temp; j -= gap) {
+//         arr[j + gap] = arr[j];
+//       }
+//       arr[j + gap] = temp;
+//     }
+//   }
+//   return arr;
+// }
 
-function insertSoft(arr){
-  for (let index = 1; index < arr.length; index++) {
-    const temp = arr[index]
-    let left = index -1
-    while(left >=0 && arr[left] > temp){
-      arr[left+1] = arr[left]
-      left--
-    }
-    arr[left + 1] = temp
-  }
-  return arr
-}
-
-
-
-
-console.log(insertSoft([4, 1, 3, 2, 7, 5, 8, 0]));
+// const array = [4, 1, 35, 2, 70, 5, 801, 0];
+// console.log(shellSort(array));

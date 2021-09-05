@@ -1,7 +1,10 @@
-/**
- * 快速排序
- *
- */
+// /**
+//  * 快速排序
+//  * 通过多次比较和交换是实现排序
+//  * 
+//  * 冒泡排序的增强版。
+//  * 
+//  */
 
 // function quickSort(arr, left, right) {
 //   let len = arr.length,
@@ -31,4 +34,4 @@
 //   return index - 1;
 // }
 
-// const array = [4,1,3,2,7,5,8,0]
+// // const array = [4,1,3,2,7,5,8,0]
